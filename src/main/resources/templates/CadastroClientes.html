@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../static/css/estilo.css">
+<title>Formulário</title>
+</head>
+<body>
+<img alt="tubarão.jpg" src="../static/tubarão.jpg">
+<h1>Cadastro de Clientes</h1>
+
+<form th:action="@{/Cliente/Salvar}" th:object="${cliente}" method="post">
+
+	<label>Nome: </label>
+	<input type="text" value="" name="nome">
+	
+	<label>Data: </label>
+	<input type="date" value="" name="data">
+	
+	<label>CPF: </label>
+	<input type="text" value="" name="cpf">
+	
+	<button type="submit">Salvar</button>
+</form>
+	<p><a href="http://localhost:8080/Cliente/Listar">Lista de Clientes Cadastrados</a></p>
+</body>
+</html>
